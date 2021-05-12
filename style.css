@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root {
+    --blue: hsl(223, 87%, 63%);
+
+    --Pale-Blue: hsl(223, 100%, 88%);
+    --Light-Red: hsl(354, 100%, 66%);
+
+    --Gray: hsl(0, 0%, 59%);
+    --Very-Dark-Blue: hsl(209, 33%, 12%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Libre Franklin', sans-serif;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+@media screen and (max-width: 425px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-width: 100vw;
+        min-height: 100vh;
+        align-items: center;
+        padding: 90px 30px 0 30px;
+    }
+
+    .header {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header .logo {
+        max-width: 60px;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .header .title {
+        font-size: 1.5em;
+        font-weight: 300;
+        color: var(--Gray);
+        margin-bottom: 15px;
+    }
+
+    .header .title span {
+        color: var(--Very-Dark-Blue);
+        font-weight: 700;
+    }
+
+    .header .subtitle {
+        color: var(--Very-Dark-Blue);
+        font-size: 13px;
+    }
+
+    .form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    .form #email {
+        height: 45px;
+        border-radius: 30px;
+        border: 1px solid var(--Pale-Blue);
+        padding-left: 25px;
+        margin-bottom: 10px;
+        outline: none;
+    }
+
+    .form #email::placeholder {
+        color: var(--Pale-Blue);
+    }
+
+    .form #button {
+        height: 45px;
+        background: var(--blue);
+        border: 1px solid var(--blue);
+        border-radius: 30px;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .image {
+        max-width: 100%;
+        margin-top: 70px;
+    }
+
+    .image img {
+        width: 100%;
+    }
+
+    .footer {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .social-media {
+        margin-bottom: 20px;
+    }
+
+    .footer .social-media ul {
+        display: flex;
+    }
+
+    .footer .social-media ul li {
+        border: var(--Pale-Blue) solid 1px;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer .social-media ul li:nth-child(2) {
+        margin: 0 10px;
+    }
+
+    .footer .social-media ul li a {
+        color: var(--blue);
+        padding: 5px;
+    }
+
+    .footer .social-media ul li a i {
+        transform: scale(.9);
+    }
+
+    .footer span {
+        font-size: 11px;
+        font-weight: 300;
+        color: var(--Gray);
+    }
+
+    .form label {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .form .error {
+        color: var(--Light-Red);
+        font-size: 12px;
+        font-weight: 300;
+        position: relative;
+        bottom: 5px;
+    }
+
+    .form #email.errorBorder {
+        border: 1px solid var(--Light-Red);
+    }
+
+}
+
+@media screen and (min-width: 426px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: 100vw;
+        min-height: 100vh;
+        padding: 50px 30px 0 30px;
+        font-size: 20px;
+    }
+
+    .header {
+        max-width: 1200px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header .logo {
+        margin-bottom: 35px;
+    }
+
+    .header .title {
+        font-weight: 300;
+        color: var(--Gray);
+        margin-bottom: 15px;
+        font-size: 2.3em;
+    }
+
+    .header .title span {
+        font-weight: 700;
+        color: var(--Very-Dark-Blue);
+    }
+
+    .header .subtitle {
+        color: var(--Very-Dark-Blue);
+        font-weight: 300;
+    }
+
+    .form {
+        margin-top: 20px;
+        max-width: 1200px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    .form #email {
+        height: 55px;
+        max-width: 420px;
+        width: 100%;
+        margin-right: 10px;
+        border-radius: 30px;
+        border: 1px solid var(--Pale-Blue);
+        padding-left: 25px;
+        font-size: .8em;
+        font-weight: 300;
+        outline: none;
+    }
+
+    .form #email::placeholder {
+        color: var(--Pale-Blue);
+    }
+
+    .form #button {
+        background: var(--blue);
+        height: 55px;
+        max-width: 200px;
+        width: 100%;
+        border-radius: 30px;
+        border: 1px solid var(--blue);
+        color: #fff;
+        font-weight: 600;
+        font-size: 15px;
+        cursor: pointer;
+        transition: .4s ease-in-out;
+        margin-top: 30px;
+    }
+
+    .form #button:hover {
+        filter: brightness(1.2);
+        transition: .4s ease-in-out;
+    }
+
+    .image {
+        max-width: 1200px;
+        width: 100%;
+        margin-bottom: 60px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .image img {
+        max-width: 650px;
+        width: 100%;
+    }
+
+    .footer {
+        max-width: 1200px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .social-media {
+        margin-bottom: 20px;
+    }
+
+    .footer .social-media ul {
+        display: flex;
+    }
+
+    .footer .social-media ul li {
+        border: var(--Pale-Blue) solid 1px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+    }
+
+    .footer .social-media ul li:nth-child(2) {
+        margin: 0 20px;
+    }
+
+    .footer .social-media ul li a {
+        color: var(--blue);
+        padding: 5px;
+    }
+
+    .footer .social-media ul li a i {
+        transform: scale(.7);
+    }
+
+    .footer span {
+        font-size: 14px;
+        font-weight: 300;
+        color: var(--Gray);
+    }
+
+    .form label {
+        position: relative;
+    }
+
+    .form #button:disabled {
+        background: var(--blue);
+        filter: brightness(1.2);
+    }
+
+    .form .error {
+        color: var(--Light-Red);
+        font-size: 13px;
+        font-weight: 300;
+        position: absolute;
+        bottom: -55px;
+        left: 28px;
+    }
+
+    .form #email.errorBorder {
+        border: 1px solid var(--Light-Red);
+    }
+}
